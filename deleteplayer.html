@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Player</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        input[type=text] {
+            width: 300px;
+            height: 25px;
+            padding: 5px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        input[type=submit], .button-back, .button-logout {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        .button-back, .button-logout {
+            background-color: blue;
+        }
+        .button-logout {
+            background-color: red;
+        }
+        .button-back a, .button-logout a {
+            color: white;
+            text-decoration: none;
+        }
+        .button-back a:hover, .button-logout a:hover {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <form action="delete_player.php" method="post">
+            <p style="font-size: 25px;">Enter Player Name</p>
+            <input type="text" name="playername" placeholder="Player Name">
+            <br>
+            <input type="submit" value="Submit">
+            <button class="button-back"><a href="admin1st.html">Back</a></button>
+            
+        </form>
+    </div>
+</body>
+</html>

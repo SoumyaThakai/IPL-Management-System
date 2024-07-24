@@ -1,0 +1,31 @@
+import smtplib
+import random
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
+def send_otp(email, name):
+    OTP = random.randint(100000, 999999)
+
+    sender_email = "your_email@gmail.com"
+    sender_password = "your_email_password"
+    subject = "OTP Verification"
+    body = f"Dear {name},\n\nYour OTP code is {OTP}."
+
+    # Set up the SMTP server
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.starttls()
+    server.login(sender_email, sender_password)
+
+    # Create the email
+    msg = MIMEMultipart()
+    msg['From'] = sender_email
+    msg['To'] = email
+    msg['Subject'] = subject
+    msg.attach(MIMEText(body, 'plain'))
+
+    # Send the email
+    server.sendmail(sender_email, email, msg.as_string())
+    server.quit()
+
+    # Return the OTP
+    return OTP

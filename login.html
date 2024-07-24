@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(https://images.template.net/334977/IPL-Poster-Background-Template-edit-online-2.jpg) no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h2 {
+  font-size: 36px;
+  text-align: center;
+     margin-bottom: 20px;
+   background-color: rgba(255, 255, 255,0 );
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+ 
+}
+button {
+  background-color: rgba(76, 175, 80, 0.8);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 16px;
+}
+button:hover {
+  opacity: 0.8;
+}
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: rgba(244, 67, 54, 0.8);
+}
+.container {
+  text-align: center;
+  padding: 16px;
+  
+}
+.container a {
+  color:black;
+  text-decoration: none;
+}
+.container a:hover {
+  text-decoration: underline;
+}
+.container p {
+  margin: 10px 0;
+}
+@media screen and (max-width: 300px) {
+  .cancelbtn {
+    width: 100%;
+  }
+}
+  
+button[type=submit] {
+  background-color: blue; /* Change the background color of the Login button to blue */
+}
+</style>
+</head>
+<body>
+
+<form action="login.php" method="post">
+  <h2><i>Indian Premier League</i></h2>
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required><br><br>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+    <button type="submit">Login</button>
+    <p><a href="create.html"><b>CREATE AN ACCOUNT</b></a></p>
+    <button class="cancelbtn"><a href="index.html" style="color: white; text-decoration: none;">Back</a></button>
+  </div>
+</form>
+
+</body>
+</html>
